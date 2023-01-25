@@ -70,6 +70,8 @@ export default RefH;
 | React.memo()   |  useMemo()  |
 | ------------ | ------------ |
 | React. memo to memoize an entire component.   | Use useMemo to memoize a value within a functional component.  |
+| React.memo() accept optional function argument to handle when it should be updated. | It accepts a dependency array for the second argument it will check for changes in the array. |
+
 
 ## 5. What's the difference between useCallback and useMemo in practice?
 
@@ -216,9 +218,10 @@ Using useSearchParams hook have a get function to get query params.
 
 ## 12. Differences Between NavLink, Link, and a?
 
-- The NavLink is used when you want to highlight a link as active.  
- **Example**  
- ```javascript
+- The NavLink is used when you want to highlight a link as active.
+ **Example**
+
+```javascript
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -241,7 +244,7 @@ function NavBar() {
 }
 ```
 
-- Link is for links that need no highlighting.  
+- Link is for links that need no highlighting.
 
 **Example**
 ```javascript
@@ -260,7 +263,9 @@ function NavBar() {
   )
 }
 ```
-- A is for external links.  
+- A is for external links.
+
+**Example**
 ```javascript
 import React from 'react'
 
@@ -279,6 +284,7 @@ function NavBar() {
 
 using useNavigate hook to programmatically route.
 
+**Example**
 App.js
 
 ```javascript
